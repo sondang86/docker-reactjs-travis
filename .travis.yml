@@ -6,4 +6,4 @@ before_install:
  - docker build -t myimagetestwithtravis -f Dockerfile.dev .
 
 script:
- - docker run CI=true myimagetestwithtravis npm run test
+ - docker run -e CI=true myimagetestwithtravis npm run test
