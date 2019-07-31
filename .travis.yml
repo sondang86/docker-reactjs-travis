@@ -6,4 +6,4 @@ before_install:
  - docker build -t sondang86/docker-reactjs-travis -f Dockerfile.dev .
 
 script:
- - docker run sondang86/docker-reactjs-travis npm run test -- --coverage
+ - docker run CI=true sondang86/docker-reactjs-travis npm run test
