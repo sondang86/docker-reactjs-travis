@@ -3,7 +3,7 @@ services:
  - docker
 
 before_install:
- - docker build -t myimagetestwithtravis -f Dockerfile.dev .
+ - docker build -t sondang86/docker-reactjs-travis -f Dockerfile.dev .
 
 script:
- - docker run -e CI=true myimagetestwithtravis npm run test
+ - docker run -e CI=true sondang86/docker-reactjs-travis npm test
