@@ -8,6 +8,6 @@ RUN npm run build
 RUN npm run test
 CMD ["npm", "run", "start"]
 
-FROM nginx
-COPY --from=mybuilder ./code/build /usr/share/nginx/html
+#FROM nginx
+#COPY --from=mybuilder ./code/build /usr/share/nginx/html
 
