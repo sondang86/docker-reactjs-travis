@@ -8,8 +8,8 @@ RUN npm run build
 #RUN npm run test
 #CMD ["npm", "run", "start"]
 
-FROM nginx
-COPY --from=mybuilder ./code/build /usr/share/nginx/html
-EXPOSE 80
+#FROM nginx
+#COPY --from=mybuilder ./code/build /usr/share/nginx/html
+#EXPOSE 80
 #CMD ["nginx", "-g", "daemon off;"]
 #CMD ["npm", "run", "start"]
