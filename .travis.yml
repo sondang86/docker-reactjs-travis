@@ -8,3 +8,16 @@ before_install:
 
 script:
  - docker run -e CI=true sondang86/docker-reactjs-travis npm run test
+
+deploy:
+ provider: elasticbeanstalk
+ region: "us-east-1"
+ app: "my_reactjs_travis_dev"
+ env: "MyReactjsTravisDev-env"
+ bucket_name: "elasticbeanstalk-us-east-1-660222557797"
+ bucket_path: "my_reactjs_travis_dev"
+ on:
+   branch: master
+ access_key_id: $AWS_ACCESS_KEY
+ secret_access_key:
+  secure: "$AWS_SECRET_KEY"
