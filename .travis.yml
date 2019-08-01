@@ -6,9 +6,8 @@ services:
 before_install:
  - docker build -t sondang86/docker-reactjs-travis -f Dockerfile.dev .
 
-script:
+#script:
  #- docker run -e CI=true sondang86/docker-reactjs-travis npm run test
- - docker run sondang86/docker-reactjs-travis npm run test -- --coverage
 
 deploy:
  provider: elasticbeanstalk
